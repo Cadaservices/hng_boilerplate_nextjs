@@ -1,0 +1,32 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: [self-hosted, linux, x64]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-liner script
+      run: echo "Hello, World, tonight we begin war against evil!"
+
+  build2:
+    runs-on: [self-hosted, linux, x64]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-liner script
+      run: echo "It is good to be here!"
+
+  build3:
+    runs-on: [x64]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-liner script
+      run: echo "May God Help us all"
+
+  build4:
+    runs-on: [self-hosted]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-liner script
+      run: echo "May God Help us all"
